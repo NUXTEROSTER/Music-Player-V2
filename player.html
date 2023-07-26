@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="player.css" rel="stylesheet" type="text/css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="player">
+      <div class="player__header">
+        <div class="player__img player__img--absolute slider">
+          <button class="player__button player__button--absolute--nw playlist">
+            <img
+              src="http://physical-authority.surge.sh/imgs/icon/playlist.svg"
+              alt="playlist-icon"
+            />
+          </button>
+          <button class="player__button player__button--absolute--center play">
+            <img
+              src="http://physical-authority.surge.sh/imgs/icon/play.svg"
+              alt="play-icon"
+            />
+            <img
+              src="http://physical-authority.surge.sh/imgs/icon/pause.svg"
+              alt="pause-icon"
+            />
+          </button>
+
+          <!-- Imágenes de las Canciones Reproducidas-->
+
+          <div class="slider__content">
+            <img
+              class="img slider__img"
+              src="https://i1.sndcdn.com/artworks-000673201300-u1l7an-t500x500.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="http://physical-authority.surge.sh/imgs/2.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="http://physical-authority.surge.sh/imgs/3.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="http://physical-authority.surge.sh/imgs/4.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="http://physical-authority.surge.sh/imgs/5.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="http://physical-authority.surge.sh/imgs/6.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i.ytimg.com/vi/siO6dkqidc4/mqdefault.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider_img"
+              src="https://pics.filmaffinity.com/bruno_mars_that_s_what_i_like-195110995-mmed.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://upload.wikimedia.org/wikipedia/en/7/7b/ChopSueyEurope.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i.ytimg.com/vi/c4-KUT6_kC0/maxresdefault.jpg"
+              alt="cover"
+            />
+             <img
+              class="img slider__img"
+              src="https://cdns-images.dzcdn.net/images/cover/27b46212fd176bef19efc3dd5bc874bb/350x350.jpg"
+              alt="cover"
+            />
+             <img
+              class="img slider__img"
+              src="https://i.scdn.co/image/ab67616d0000b273df35bf65ebd6738a760e2cd1"
+              alt="cover"
+            />
+             <img
+              class="img slider__img"
+              src="https://cdn.wallpapersafari.com/38/27/8HQd49.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://m.media-amazon.com/images/I/71TSvwN5tDL._UF1000,1000_QL80_.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i.scdn.co/image/ab67616d0000b27312bf4f75bd9c7cddd099d723"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i.ytimg.com/vi/dmcNbsLCpBQ/mqdefault.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://m.media-amazon.com/images/M/MV5BZTE1Mzk5NmEtNzUzOC00YjQ2LTliMmEtOGIzNTk1ODgwMDMwXkEyXkFqcGdeQXVyMTM1Mzk4NzE4._V1_.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i.musicaimg.com/discos/max/89270.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://upload.wikimedia.org/wikipedia/en/5/51/Amon_Amarth_-_Twlight_of_the_Thunder_God.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://i1.sndcdn.com/artworks-XzlL2i4qWyul-0-t500x500.jpg"
+              alt="cover"
+            />
+            <img
+              class="img slider__img"
+              src="https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/e2/9e/63/e29e6388-a53c-6ab0-b211-31759b246654/0.jpg/600x600bf-60.jpg"
+              alt="cover"
+            />
+          </div>
+        </div>
+
+        <!---->
+
+        <div class="player__controls">
+          <button class="player__button back">
+            <img
+              class="img"
+              src="http://physical-authority.surge.sh/imgs/icon/back.svg"
+              alt="back-icon"
+            />
+          </button>
+          <p class="player__context slider__context">
+            <strong class="slider__name"></strong>
+            <span class="player__title slider__title"></span>
+          </p>
+          <button class="player__button next">
+            <img
+              class="img"
+              src="http://physical-authority.surge.sh/imgs/icon/next.svg"
+              alt="next-icon"
+            />
+          </button>
+          <div class="progres">
+            <div class="progres__filled"></div>
+          </div>
+        </div>
+      </div>
+ 
+      <!---->
+
+      <ul class="player__playlist list">
+      <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://i1.sndcdn.com/artworks-000673201300-u1l7an-t500x500.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Young Folks</b>
+            <span class="flex">
+              <span class="player__title">Peter Bjorn And John</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/Peter Bjorn And John - Young Folks(MP3_70K).mp3"
+          ></audio>
+        </li>
+      <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="http://physical-authority.surge.sh/imgs/2.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">blinding lights</b>
+            <span class="flex">
+              <span class="player__title">the weeknd</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="http://physical-authority.surge.sh/music/2.mp3"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="http://physical-authority.surge.sh/imgs/3.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">джованна</b>
+            <span class="flex">
+              <span class="player__title">enrasta</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="http://physical-authority.surge.sh/music/3.mp3"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="http://physical-authority.surge.sh/imgs/4.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">a man</b>
+            <span class="flex">
+              <span class="player__title">travis scott</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="http://physical-authority.surge.sh/music/4.mp3"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="http://physical-authority.surge.sh/imgs/5.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">unforgetting</b>
+            <span class="flex">
+              <span class="player__title">zaxx</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="http://physical-authority.surge.sh/music/5.mp3"
+          ></audio>
+        </li>
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="http://physical-authority.surge.sh/imgs/6.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">waharan</b>
+            <span class="flex">
+              <span class="player__title">Randall</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="http://physical-authority.surge.sh/music/6.mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://i.ytimg.com/vi/siO6dkqidc4/mqdefault.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">There is a Light that never Goes Out</b>
+            <span class="flex">
+              <span class="player__title">The Smiths</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/The Smiths - There Is A Light That Never Goes Out(MP3_70K).mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://pics.filmaffinity.com/bruno_mars_that_s_what_i_like-195110995-mmed.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">That´s what I like</b>
+            <span class="flex">
+              <span class="player__title">Bruno Mars</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/Bruno Mars - That_s What I Like (Official Music Video)(MP3_70K).mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://upload.wikimedia.org/wikipedia/en/7/7b/ChopSueyEurope.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Chop Suey</b>
+            <span class="flex">
+              <span class="player__title">System of a Down</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/System of a Down - Chop Suey (Remastered 2021)(MP3_70K).mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://i.ytimg.com/vi/c4-KUT6_kC0/maxresdefault.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">Ulala</b>
+            <span class="flex">
+              <span class="player__title">Khannon</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/Ulala - Khannon(MP3_128K).mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://cdns-images.dzcdn.net/images/cover/27b46212fd176bef19efc3dd5bc874bb/350x350.jpg"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">La Leyenda del hada y el Mago</b>
+            <span class="flex">
+              <span class="player__title">Rata Blanca</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/Rata Blanca - La Leyenda Del Hada Y El Mago (Audio)(MP3_70K).mp3"
+          ></audio>
+        </li>
+        <!---->
+        <li class="player__song">
+          <img
+            class="player__img img"
+            src="https://i.scdn.co/image/ab67616d0000b273df35bf65ebd6738a760e2cd1"
+            alt="cover"
+          />
+          <p class="player__context">
+            <b class="player__song-name">She Loves Me Not</b>
+            <span class="flex">
+              <span class="player__title">Papa Roach</span>
+              <span class="player__song-time"></span>
+            </span>
+          </p>
+          <audio
+            class="audio"
+            src="Songs I/Papa Roach - She Loves Me Not(MP3_70K).mp3"
+          ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://cdn.wallpapersafari.com/38/27/8HQd49.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Viva la Vida</b>
+              <span class="flex">
+                <span class="player__title">Coldplay</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Coldplay - Viva La Vida (Official Video)(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://m.media-amazon.com/images/I/71TSvwN5tDL._UF1000,1000_QL80_.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">I Don´t Want to Set The World on Fire</b>
+              <span class="flex">
+                <span class="player__title">The Ink Spots</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Fallout - I Don_t Want To Set The World On Fire (Tribute)(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://i.scdn.co/image/ab67616d0000b27312bf4f75bd9c7cddd099d723"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">I´m Not In Love</b>
+              <span class="flex">
+                <span class="player__title">10cc</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/I_m not in love - 10cc [Subtitulado _ Lyrics HD](MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://i.ytimg.com/vi/dmcNbsLCpBQ/mqdefault.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Wouldn´t It Be Nice</b>
+              <span class="flex">
+                <span class="player__title">The Beach Boys</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Wouldn_t It Be Nice (Remastered 1999)(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://m.media-amazon.com/images/M/MV5BZTE1Mzk5NmEtNzUzOC00YjQ2LTliMmEtOGIzNTk1ODgwMDMwXkEyXkFqcGdeQXVyMTM1Mzk4NzE4._V1_.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">You Spin Me Round</b>
+              <span class="flex">
+                <span class="player__title">Dead or Alive</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Dead Or Alive - You Spin Me Round (Like a Record) (Official Video)(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://i.musicaimg.com/discos/max/89270.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Dia Tras Dia</b>
+              <span class="flex">
+                <span class="player__title">Andrés Cepeda</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Día Tras Día(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://upload.wikimedia.org/wikipedia/en/5/51/Amon_Amarth_-_Twlight_of_the_Thunder_God.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Twilight of the Thunder God</b>
+              <span class="flex">
+                <span class="player__title">Amon Amarth</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Amon Amarth - Twilight of the Thunder God(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://i1.sndcdn.com/artworks-XzlL2i4qWyul-0-t500x500.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Be Quiet And Drive</b>
+              <span class="flex">
+                <span class="player__title">Deftones</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Deftones - Be Quiet and Drive (Far Away) (Lyrics in description)(MP3_70K).mp3"
+            ></audio>
+          <!---->
+          <li class="player__song">
+            <img
+              class="player__img img"
+              src="https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/e2/9e/63/e29e6388-a53c-6ab0-b211-31759b246654/0.jpg/600x600bf-60.jpg"
+              alt="cover"
+            />
+            <p class="player__context">
+              <b class="player__song-name">Detrás de la Fachada Está el Jardín</b>
+              <span class="flex">
+                <span class="player__title">Margarita Siempre VIva</span>
+                <span class="player__song-time"></span>
+              </span>
+            </p>
+            <audio
+              class="audio"
+              src="Songs I/Margarita Siempre Viva - Detras de la fachada Está el Jardín.mp3"
+            ></audio>
+          <!---->
+        </li>
+      </ul>
+    </div>
+    <script src="/player.js"></script>
+  </body>
+</html>
